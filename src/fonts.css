@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Neco Variable";
+    src: url("/public/fonts/Neco-Variable.ttf") format("truetype");     
+    font-weight: 100 900; /* Set the range if the variable font supports it */
+    font-style: normal;
+    font-display: swap;
+  }
+  
