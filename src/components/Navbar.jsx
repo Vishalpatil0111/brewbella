@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="flex top-0 left-0 flex-row w-full   bg-[#1f3133]/50 backdrop-blur-lg shadow-lg h-16 md:h-23 border-b-1 border-[#B5EAEE] z-50 ">
+      <nav className="flex top-0 left-0 flex-row w-full   bg-[#1f3133]/50 backdrop-blur-lg shadow-lg h-16 md:h-23 border-b-1 border-[#B5EAEE] z-10">
         <div className="hidden ml-15 lg:flex tracking-wider w-auto h-full justify-center items-center space-x-5 gap-8 text-[#B5EAEE] text-lg font-extralight">
           <Link className="hover:text-zinc-200" to="/">Home</Link>
           <Link className="hover:text-zinc-200" to="/Explore">Explore</Link>

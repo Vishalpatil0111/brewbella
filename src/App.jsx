@@ -6,8 +6,8 @@ import Hero from './components/Home/Hero'
 
 function App() {
   return (
-    <div className='w-full'>
-      <Navbar />
+    <div className='w-full '>
+      
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
