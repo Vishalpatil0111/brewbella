@@ -1,16 +1,27 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, ShoppingCart, Search, Store, Coffee } from "lucide-react";
 import Menubar from './Menubar';
+import gsap from 'gsap';
 
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navref =  useRef(null)
+  useEffect(()=>{
+        // Navbar Fade In
+        gsap.from(navref.current, {
+          opacity: 0,
+          y: -30,
+          duration: 1,
+          ease: "power2.out",
+        });
+  },[])
 
   return (
     <>
-      <nav className="flex top-0 left-0 flex-row w-full   bg-[#1f3133]/50 backdrop-blur-lg shadow-lg h-16 md:h-23 border-b-1 border-[#B5EAEE] ">
+      <nav ref={navref} className="flex top-0 left-0 flex-row w-full  bg-transparent z-50  shadow-lg h-16 md:h-23 ">
         <div className="hidden ml-15 lg:flex tracking-wider w-auto h-full justify-center items-center space-x-5 gap-8 text-[#B5EAEE] text-lg font-extralight">
           <Link className="hover:text-zinc-200" to="/">Home</Link>
           <Link className="hover:text-zinc-200" to="/Explore">Explore</Link>
@@ -47,7 +58,7 @@ function Navbar() {
             </Link>
           </div>
 
-          <div onClick={() => setIsOpen(true)} className="flex border-l bg-[#2F4A4C] border-[#B5EAEE] lg:gap-4 h-full p-2 sm:p-5 items-center cursor-pointer">
+          <div onClick={() => setIsOpen(true)} className="flex border-l bg-zinc-800/50 backdrop-blur-lg border-[#B5EAEE] lg:gap-4 h-full p-2 sm:p-5 items-center cursor-pointer">
             <Menu className="md:w-8 md:h-8 w-5 h-5 md:ml-5 lg:ml-0 text-[#ADE1E5]" />
             <h1 className="lg:block hidden text-[#ADE1E5] text-xl">Menu</h1>
           </div>
