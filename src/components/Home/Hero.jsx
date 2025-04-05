@@ -48,7 +48,7 @@ const Hero = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+      <div className="absolute inset-0 bg-black opacity-75 z-0"></div>
 
       {/* Navbar */}
       <div  className="absolute top-0 left-0 w-full z-30">
@@ -59,7 +59,7 @@ const Hero = () => {
       <div className="relative z-10 text-center w-full px-4 sm:px-8 md:px-12 lg:px-16">
         <h1
           ref={subtextRef}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-[#E5DBC9]"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wider text-[#ddc79f]"
         >
           You are always welcome!
         </h1>
@@ -67,7 +67,7 @@ const Hero = () => {
         <div className="w-full flex flex-col py-4 sm:py-6 md:py-8 lg:py-10 px-4 sm:px-6 md:px-8 lg:px-12">
           <h1
             ref={headingRef1}
-            className="text-[12vw] sm:text-[10vw] md:text-[7vw] lg:text-[6vw] font-bold tracking-wide text-[#ada69b] leading-tight"
+            className="text-[12vw] sm:text-[10vw] md:text-[7vw] lg:text-[6vw] font-bold tracking-wide text-[#ddc79f] leading-tight"
           >
             Fueling Your Day,
           </h1>

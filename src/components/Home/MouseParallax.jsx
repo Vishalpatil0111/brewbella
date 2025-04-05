@@ -2,9 +2,9 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const images = [
-  { id: 1, img: "/images/heroimg1.webp" },
-  { id: 2, img: "/images/heroimg2.webp" },
-  { id: 3, img: "/images/heroimg3.webp" },
+  { id: 1, img: "/images/heroimg4.webp" },
+  { id: 2, img: "/images/scrollimg1.webp" },
+  { id: 3, img: "/images/scrollimg2.jpg" },
 ];
 
 function MouseParallax() {
@@ -57,15 +57,15 @@ function MouseParallax() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden bg-[#D3C5AC] flex items-center justify-center"
+      className="relative w-full h-screen overflow-hidden bg-zinc-900  flex items-center justify-center"
     >
       <div ref={innerRef} className="flex w-max gap-10 px-10">
         {images.map((item, index) => (
           <div
             key={item.id}
-            className={`image-box flex-shrink-0 overflow-hidden rounded-xl shadow-lg
+            className={`image-box flex-shrink-0 overflow-hidden shadow-lg
            ${index === 1 ? "z-10" : "z-0"}
-           w-[90vw] h-[90vw] sm:w-[70vw] sm:h-[70vw] md:w-[45vw] md:h-[45vw] lg:w-[40vw] lg:h-[40vw]
+           w-[90vw] h-[90vw] sm:w-[70vw] sm:h-[70vw] md:w-[45vw] md:h-[45vw] lg:w-[55vw] lg:h-[40vw]
          `}
           >
 

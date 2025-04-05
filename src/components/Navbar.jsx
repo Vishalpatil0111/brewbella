@@ -22,7 +22,7 @@ function Navbar() {
   return (
     <>
       <nav ref={navref} className="flex top-0 left-0 flex-row w-full  bg-transparent z-50  shadow-lg h-16 md:h-23 ">
-        <div className="hidden ml-15 lg:flex tracking-wider w-auto h-full justify-center items-center space-x-5 gap-8 text-[#B5EAEE] text-lg font-extralight">
+        <div className="hidden ml-15 lg:flex tracking-wider w-auto h-full justify-center items-center space-x-5 gap-8 text-[#ddc79f] text-lg font-extralight">
           <Link className="hover:text-zinc-200" to="/">Home</Link>
           <Link className="hover:text-zinc-200" to="/Explore">Explore</Link>
           <Link className="hover:text-zinc-200" to="/About">About</Link>
@@ -58,9 +58,9 @@ function Navbar() {
             </Link>
           </div>
 
-          <div onClick={() => setIsOpen(true)} className="flex border-l bg-zinc-800/50 backdrop-blur-lg border-[#B5EAEE] lg:gap-4 h-full p-2 sm:p-5 items-center cursor-pointer">
-            <Menu className="md:w-8 md:h-8 w-5 h-5 md:ml-5 lg:ml-0 text-[#ADE1E5]" />
-            <h1 className="lg:block hidden text-[#ADE1E5] text-xl">Menu</h1>
+          <div onClick={() => setIsOpen(true)} className="flex  bg-zinc-800/50 backdrop-blur-lg lg:gap-4 h-full p-2 sm:p-5 items-center cursor-pointer">
+            <Menu className="md:w-8 md:h-8 w-5 h-5 md:ml-5 lg:ml-0 text-[#ddc79f]" />
+            <h1 className="lg:block hidden text-[#ddc79f] text-xl">Menu</h1>
           </div>
         </div>
       </nav>
