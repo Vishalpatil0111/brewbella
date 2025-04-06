@@ -1,9 +1,11 @@
-import { menuitem } from 'framer-motion/client';
-import React from 'react'
+
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 
+
 function HomeMenu() {
- 
+
+  
   const Navigate = useNavigate()
   const handleMenu = ()=>{
     Navigate(`/menu`)

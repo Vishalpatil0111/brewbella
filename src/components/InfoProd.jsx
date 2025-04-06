@@ -1,24 +1,24 @@
-import React from 'react';
-
+import React, { useRef, useEffect } from 'react';
+import { useImageReveal } from '../context/useImageReveal';
 function InfoProd() {
+  const cardsRef = useRef([]);
+  useImageReveal(cardsRef);
+  
   const infoCards = [
     {
       title: "Our Heritage",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, architecto.",
       img: "/images/heroimg1.webp",
-     
     },
     {
-      title: "Our Heritage",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, architecto.",
+      title: "Our Passion",
+      desc: "Crafted with care. Curated with love. Savor every sip of our journey.",
       img: "/images/heroimg2.webp",
-    
     },
     {
-      title: "Our Heritage",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, architecto.",
+      title: "Our Community",
+      desc: "More than coffee — it’s connection, warmth, and a place to call home.",
       img: "/images/heroimg3.webp",
-    
     },
   ];
 
@@ -27,11 +27,12 @@ function InfoProd() {
       {infoCards.map((card, index) => (
         <div
           key={index}
+          ref={(el) => (cardsRef.current[index] = el)}
           className="hover:bg-[#b6a479] transition-all ease-in-out text-[#ddc79f] hover:text-zinc-900  hover:-translate-y-2 hover:scale-100 duration-250 rounded-xl h-fit md:h-full md:w-1/3 w-full p-5 md:px-4 md:py-10 lg:p-8 flex flex-col items-center"
         >
-          <div className="w-full h-[50vw] md:h-[25vw] p-2">
+          <div className="w-full h-[50vw] bg-zinc-800 md:h-[25vw] rounded-md overflow-hidden">
             <img
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover "
               src={card.img}
               alt={card.title}
             />
