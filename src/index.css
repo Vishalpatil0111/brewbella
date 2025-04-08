@@ -7,6 +7,17 @@
     font-family:"Neco Variable, sans-serif" ;
     box-sizing: border-box;
 }
-body{
-    overflow-x: hidden;
-}
+
+@keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll-left 30s linear infinite;
+  }
+  

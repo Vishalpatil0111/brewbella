@@ -10,7 +10,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navref =  useRef(null)
   useEffect(()=>{
-        // Navbar Fade In
+      
         gsap.from(navref.current, {
           opacity: 0,
           y: -30,
@@ -43,7 +43,7 @@ function Navbar() {
               <Search className="md:w-5 md:h-5 w-4 h-4 text-[#d5c5b3]" />
             </button>
 
-            <Link to="/store" className="flex items-center px-1.5 py-1.5 gap-2 md:px-5 md:py-3 rounded-full border border-[#7A6A58] bg-transparent hover:bg-[#806d5d] transition-all">
+            <Link to="/menu" className="flex items-center px-1.5 py-1.5 gap-2 md:px-5 md:py-3 rounded-full border border-[#7A6A58] bg-transparent hover:bg-[#806d5d] transition-all">
               <Store className="md:w-5 md:h-5 w-3 h-3 text-[#d5c5b3]" />
               <span className="text-[#d5c5b3] hidden md:block tracking-wider font-medium text-lg">Store</span>
             </Link>

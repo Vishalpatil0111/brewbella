@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 function HomeMenu() {
 
-  
+
   const Navigate = useNavigate()
-  const handleMenu = ()=>{
-    Navigate(`/menu`)
+  const handleMenu = (category) => {
+    Navigate(`/menu/${category}`);
   }
   const menuItems = [
     {
@@ -39,8 +39,10 @@ function HomeMenu() {
               <h1 className='text-[7vw] md:text-[4.5vw] font-medium'>{item.title}</h1>
               <h5 className=' text-lg md:text-md leading-0'>{item.subtitle}</h5>
             </div>
-            <button onClick={handleMenu} className='px-10 text-zinc-950 rounded-sm py-2 font-semibold bg-[#ddc79f] flex flex-row'>Menu 
-              
+            <button
+              onClick={() => handleMenu(item.title.toLowerCase())}
+              className='px-10 text-zinc-950 rounded-sm py-2 font-semibold bg-[#ddc79f] flex flex-row'>
+              Menu
             </button>
           </div>
         ))}
