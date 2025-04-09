@@ -1,23 +1,22 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, ShoppingCart, Search, Store, Coffee } from "lucide-react";
-import Menubar from './Menubar';
+import { Menu, Search, Store, Coffee } from "lucide-react";
 import gsap from 'gsap';
 
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const navref =  useRef(null)
-  useEffect(()=>{
-      
-        gsap.from(navref.current, {
-          opacity: 0,
-          y: -30,
-          duration: 1,
-          ease: "power2.out",
-        });
-  },[])
+ 
+  const navref = useRef(null)
+  useEffect(() => {
+
+    gsap.from(navref.current, {
+      opacity: 0,
+      y: -30,
+      duration: 1,
+      ease: "power2.out",
+    });
+  }, [])
 
   return (
     <>
@@ -48,14 +47,7 @@ function Navbar() {
               <span className="text-[#d5c5b3] hidden md:block tracking-wider font-medium text-lg">Store</span>
             </Link>
 
-            <Link to="/cart" className="relative">
-              <div className="md:w-12 md:h-12 w-6 h-6 flex items-center justify-center rounded-full bg-transparent border border-[#7A6A58] hover:bg-[#806d5d] transition-all">
-                <ShoppingCart className="md:w-5 md:h-5 w-4 h-4 text-[#d5c5b3]" />
-              </div>
-              <span className="absolute -top-1 -right-1 bg-[#7A6A58] text-white text-xs px-1.5 py-0.5 rounded-full">
-                0
-              </span>
-            </Link>
+          
           </div>
 
           <div onClick={() => setIsOpen(true)} className="flex  bg-zinc-800/50 backdrop-blur-lg lg:gap-4 h-full p-2 sm:p-5 items-center cursor-pointer">
@@ -65,7 +57,7 @@ function Navbar() {
         </div>
       </nav>
 
-     
+
     </>
   );
 }

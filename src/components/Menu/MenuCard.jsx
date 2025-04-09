@@ -1,10 +1,13 @@
 import React from 'react';
+import {  useNavigate } from 'react-router-dom';
 
 const MenuCard = ({ title, description, image }) => {
+
+  const navigate = useNavigate()
   return (
-    <div className="group relative cursor-pointer overflow-hidden rounded-xl border border-[#ddc79f] bg-transparent">
+    <div onClick={()=>navigate(`/menu/${title.toLowerCase()}`)} className="group  relative cursor-pointer overflow-hidden rounded-xl border border-[#ddc79f] bg-transparent">
       
-      <div className="relative z-10 flex flex-col items-center text-center py-6">
+      <div  className="relative z-10 flex flex-col items-center text-center py-6">
         <h1 className="text-2xl md:text-3xl text-white md:text-[#ddc79f]  font-semibold group-hover:text-white transition duration-300">
           {title}
         </h1>
