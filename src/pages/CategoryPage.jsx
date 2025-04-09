@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useOrder } from '../components/Menu/OrderContext';
 import { useCart } from '../context/CartContext';
 
 const dummyProducts = {

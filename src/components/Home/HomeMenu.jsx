@@ -14,15 +14,15 @@ function HomeMenu() {
     {
       title: "Coffees",
       subtitle: "Rich Aromatic Brews",
-      image: "/images/menucoffee.jpg", // replace with your actual coffee image
+      image: "/images/menucoffee.jpg", 
     },
     {
-      title: "Desserts",
+      title: "Dessert",
       subtitle: "Sweet Indulgent Treats",
       image: "/images/menudessert.jpg",
     },
     {
-      title: "Pastries",
+      title: "Pastry",
       subtitle: "Freshly Baked Goodness",
       image: "/images/pastry.jpeg",
     },

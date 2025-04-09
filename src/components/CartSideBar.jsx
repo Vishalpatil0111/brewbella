@@ -1,10 +1,11 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
 import { X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CartSideBar = ({ isOpen, onClose }) => {
   const { cartItems, removeFromCart, increaseQty, decreaseQty, cartCount, totalPrice } = useCart();
-
+  const navigate = useNavigate()
   return (
     <div
       className={`fixed top-0 right-0 h-full w-80 max-w-full bg-zinc-900 text-white shadow-lg transform transition-transform duration-300 z-50 ${
@@ -74,7 +75,7 @@ const CartSideBar = ({ isOpen, onClose }) => {
           <span>Total Price:</span>
           <span>₹{totalPrice}</span>
         </div>
-        <button
+        <button onClick={() => navigate("/checkout")}
           className="w-full bg-[#ddc79f] hover:bg-[#c7b48e] text-black py-2 rounded-lg font-semibold transition"
           disabled={cartItems.length === 0}
         >
